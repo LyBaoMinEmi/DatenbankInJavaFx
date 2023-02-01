@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Create_Cocktail.CreateFXMLController">
+   <children>
+      <Label layoutX="100.0" layoutY="112.0" style="-fx-font-weight: bold;" text="Name *" />
+      <Label layoutX="98.0" layoutY="164.0" style="-fx-font-weight: bold;" text="Rezept *" />
+      <TextArea fx:id="tfCreateRecipe" layoutX="181.0" layoutY="156.0" prefHeight="96.0" prefWidth="537.0" wrapText="true" />
+      <TextField fx:id="tfCreateName" layoutX="180.0" layoutY="107.0" prefHeight="31.0" prefWidth="245.0" />
+      <Button fx:id="btnSaveCreate" layoutX="370.0" layoutY="542.0" mnemonicParsing="false" onAction="#handlebtnSaveCreate" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #14eecd;" text="Speichern">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <VBox layoutX="102.0" layoutY="307.0" prefHeight="200.0" prefWidth="100.0" spacing="36.0">
+         <children>
+            <Label style="-fx-font-weight: bold;" text="Zutat *" />
+            <Label style="-fx-font-weight: bold;" text="Menge *" />
+            <Label style="-fx-font-weight: bold;" text="Einheit *" />
+         </children>
+      </VBox>
+      <VBox layoutX="181.0" layoutY="300.0" prefHeight="136.0" prefWidth="187.0" spacing="27.0">
+         <children>
+            <ComboBox fx:id="cbIngredientCreate" prefHeight="31.0" prefWidth="187.0" />
+            <TextField fx:id="tfQuantityCreate" />
+            <ComboBox fx:id="cbUnitCreate" prefHeight="31.0" prefWidth="192.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvCreate" layoutX="437.0" layoutY="300.0" prefHeight="200.0" prefWidth="294.0">
+        <columns>
+          <TableColumn fx:id="tvIngCreate" prefWidth="118.0" text="Zutat" />
+          <TableColumn fx:id="tvQuantityCreate" prefWidth="78.0" text="Menge" />
+            <TableColumn fx:id="tvUnitCreate" prefWidth="97.0" text="Einheit" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAddIngredient" layoutX="223.0" layoutY="468.0" mnemonicParsing="false" onAction="#handleBtnAddIngredient" style="-fx-background-color: #14eecd;" text="Hinzufügen">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label fx:id="errorQuantityCreate" layoutX="165.0" layoutY="392.0" prefHeight="21.0" prefWidth="272.0" textFill="#c62f2f" />
+      <Label layoutX="98.0" layoutY="63.0" prefHeight="21.0" prefWidth="353.0" style="-fx-font-style: italic;" text="* Pflichtfelder" />
+      <Label fx:id="errorNameCreate" layoutX="451.0" layoutY="112.0" prefHeight="21.0" prefWidth="203.0" textFill="#d31a1a" />
+      <Label fx:id="errorRecipeCreate" layoutX="185.0" layoutY="259.0" prefHeight="21.0" prefWidth="353.0" textFill="#e81111" />
+      <Label fx:id="infoQuantityCreate" layoutX="123.0" layoutY="390.0" prefHeight="21.0" prefWidth="294.0" />
+      <Label layoutX="540.0" layoutY="267.0" prefHeight="21.0" prefWidth="115.0" style="-fx-font-weight: bold;" text="Zutaten Tabelle" />
+      <Label fx:id="errorTableCreate" layoutX="439.0" layoutY="510.0" prefHeight="21.0" prefWidth="287.0" textFill="#f81a1a" />
+   </children>
+</AnchorPane>

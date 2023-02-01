@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Cocktail.ViewFXMLController">
+   <children>
+      <TableView fx:id="tvViewIngredients" layoutX="285.0" layoutY="360.0" prefHeight="259.0" prefWidth="306.0">
+         <columns>
+            <TableColumn fx:id="clViewIngredients" prefWidth="121.0" text="Zutaten" />
+            <TableColumn fx:id="clViewQuantity" prefWidth="76.0" text="Menge" />
+            <TableColumn fx:id="clViewUnit" prefWidth="106.0" text="Einheit" />
+         </columns>
+      </TableView>
+      <VBox layoutX="145.0" layoutY="52.0" prefHeight="280.0" prefWidth="140.0" spacing="15.0">
+         <children>
+            <Label contentDisplay="TOP" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Name" />
+            <Label layoutX="10.0" layoutY="31.0" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Glas" />
+            <Label layoutX="10.0" layoutY="10.0" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Alkoholgehalt (%)" />
+            <Label layoutX="10.0" layoutY="46.0" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Gruppe" />
+            <Label lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Rezept" />
+         </children>
+      </VBox>
+      <VBox layoutX="285.0" layoutY="52.0" prefHeight="280.0" prefWidth="495.0" spacing="15.0">
+         <children>
+            <Label fx:id="vName" lineSpacing="15.0" text="Rose" />
+            <Label fx:id="vGlass" layoutX="10.0" layoutY="31.0" lineSpacing="15.0" text="Cocktailglas" />
+            <Label fx:id="vAlcohol" layoutX="10.0" layoutY="10.0" lineSpacing="15.0" text="31" />
+            <Label fx:id="vGroup" layoutX="10.0" layoutY="46.0" lineSpacing="15.0" text="ohne" />
+            <Label fx:id="vRecipe" alignment="TOP_LEFT" prefHeight="136.0" prefWidth="488.0" />
+         </children>
+      </VBox>
+      <Label layoutX="145.0" layoutY="367.0" style="-fx-font-weight: BOLD;" text="Zutaten Tabelle" />
+   </children>
+</AnchorPane>
