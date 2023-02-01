@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="717.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Delete_Cocktail.DeleteFXMLController">
+   <children>
+      <TableView fx:id="tvViewIngredients" layoutX="285.0" layoutY="395.0" prefHeight="259.0" prefWidth="306.0">
+         <columns>
+            <TableColumn fx:id="clViewIngredients" prefWidth="121.0" text="Zutaten" />
+            <TableColumn fx:id="clViewQuantity" prefWidth="76.0" text="Menge" />
+            <TableColumn fx:id="clViewUnit" prefWidth="106.0" text="Einheit" />
+         </columns>
+      </TableView>
+      <VBox layoutX="145.0" layoutY="93.0" prefHeight="280.0" prefWidth="140.0" spacing="15.0">
+         <children>
+            <Label contentDisplay="TOP" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Name" />
+            <Label layoutX="10.0" layoutY="31.0" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Glas" />
+            <Label layoutX="10.0" layoutY="10.0" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Alkoholgehalt (%)" />
+            <Label layoutX="10.0" layoutY="46.0" lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Gruppe" />
+            <Label lineSpacing="15.0" style="-fx-font-weight: BOLD;" text="Rezept" />
+         </children>
+      </VBox>
+      <VBox layoutX="285.0" layoutY="92.0" prefHeight="280.0" prefWidth="495.0" spacing="15.0">
+         <children>
+            <Label fx:id="vName" lineSpacing="15.0" text="Rose" />
+            <Label fx:id="vGlass" layoutX="10.0" layoutY="31.0" lineSpacing="15.0" text="Cocktailglas" />
+            <Label fx:id="vAlcohol" layoutX="10.0" layoutY="10.0" lineSpacing="15.0" text="31" />
+            <Label fx:id="vGroup" layoutX="10.0" layoutY="46.0" lineSpacing="15.0" text="ohne" />
+            <Label fx:id="vRecipe" alignment="TOP_LEFT" prefHeight="125.0" prefWidth="495.0" textOverrun="CLIP" wrapText="true" />
+         </children>
+      </VBox>
+      <Label layoutX="145.0" layoutY="402.0" style="-fx-font-weight: BOLD;" text="Zutaten Tabelle" />
+      <Button fx:id="btnDeleteCocktail" layoutX="286.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBtnDeleteCocktail" prefHeight="44.0" prefWidth="272.0" style="-fx-background-color: #14eecd;" text="Löschen diesen Cocktail" textFill="#9e0404">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
